@@ -1,0 +1,126 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 10px 30px rgba(41, 35, 42, 0.06);
+}
+
+.before-booking {
+  padding-top: 120px;
+  padding-bottom: 130px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.purpose-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.7fr);
+  align-items: end;
+  gap: 72px;
+  margin: 42px 0 58px;
+}
+
+.purpose-heading h2 {
+  margin: 0;
+  font-size: clamp(58px, 7.5vw, 116px);
+}
+
+.purpose-heading p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #bdb5b8;
+  border-bottom: 1px solid #bdb5b8;
+}
+
+.purpose-grid article {
+  min-height: 235px;
+  padding: 34px 34px 38px 0;
+}
+
+.purpose-grid article + article {
+  padding-left: 34px;
+  border-left: 1px solid #bdb5b8;
+}
+
+.purpose-grid span {
+  display: block;
+  margin-bottom: 52px;
+  color: var(--wine);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.purpose-grid h3 {
+  margin-bottom: 14px;
+  font: 400 31px/1.15 Georgia, "Times New Roman", serif;
+  letter-spacing: -0.04em;
+}
+
+.purpose-grid p {
+  max-width: 330px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a span[aria-hidden="true"] {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 112px;
+  }
+
+  .site-header {
+    max-height: 138px;
+    overflow: auto;
+  }
+
+  .before-booking {
+    padding-top: 85px;
+    padding-bottom: 90px;
+  }
+
+  .purpose-heading {
+    display: block;
+    margin-bottom: 42px;
+  }
+
+  .purpose-heading h2 {
+    margin-bottom: 28px;
+    font-size: clamp(54px, 14vw, 84px);
+  }
+
+  .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .purpose-grid article {
+    min-height: 0;
+    padding: 30px 0 34px;
+  }
+
+  .purpose-grid article + article {
+    padding-left: 0;
+    border-top: 1px solid #bdb5b8;
+    border-left: 0;
+  }
+
+  .purpose-grid span {
+    margin-bottom: 24px;
+  }
+}
